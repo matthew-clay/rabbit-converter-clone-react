@@ -1,3 +1,28 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@font-face {
+  font-family: "Zawgyi-One";
+  src: url("https://cdn.rawgit.com/LeonarAung/MyanmarFont/6cf1262f/zawgyi.ttf")
+      format("woff"),
+    url("https://cdn.rawgit.com/LeonarAung/MyanmarFont/6cf1262f/zawgyi.ttf")
+      format("ttf");
+}
+@font-face {
+  font-family: "Unicode";
+  src: url("https://cdn.rawgit.com/LeonarAung/MyanmarFont/6cf1262f/mon3.woff")
+      format("woff"),
+    url("https://cdn.rawgit.com/LeonarAung/MyanmarFont/6cf1262f/mon3.ttf")
+      format("ttf");
+}
+
+@layer utilities {
+  .fontUni {
+    font-family: Unicode;
+  }
+
+  .fontZawgyi {
+    font-family: Zawgyi-One;
+  }
+}
