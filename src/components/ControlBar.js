@@ -2,7 +2,9 @@ function ControlBar(props) {
   const copyToClipboard = (valueRef) => {
     valueRef.current.select();
     document.execCommand("copy");
-    console.log("text copied to clipboard...");
+    console.log(
+      `${valueRef.current.id.toUpperCase()} text copied to clipboard...`
+    );
   };
 
   return (
