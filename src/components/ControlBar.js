@@ -7,10 +7,12 @@ function ControlBar(props) {
     );
 
     const toastAlertTag = document.querySelector("#toast-alert");
-    toastAlertTag.style.display = "flex";
     setTimeout(() => {
-      toastAlertTag.style.display = "none";
-    }, 2000);
+      toastAlertTag.style.opacity = "1";
+    }, 1000);
+    setTimeout(() => {
+      toastAlertTag.style.opacity = "0";
+    }, 3000);
   };
 
   return (
@@ -36,7 +38,10 @@ function ControlBar(props) {
         ></input>
       </div>
 
-      <div className="relative hidden justify-center" id="toast-alert">
+      <div
+        className="relative flex opacity-0 justify-center transition-all"
+        id="toast-alert"
+      >
         <span className="absolute z-10 bg-blue-400 px-5 py-4 text-white font-semibold select-none rounded-md">
           Text copied to clipboard...
         </span>
