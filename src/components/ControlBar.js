@@ -2,9 +2,6 @@ function ControlBar(props) {
   const copyToClipboard = (valueRef) => {
     valueRef.current.select();
     document.execCommand("copy");
-    console.log(
-      `${valueRef.current.id.toUpperCase()} text copied to clipboard...`
-    );
 
     const toastAlertTag = document.querySelector("#toast-alert");
     setTimeout(() => {
